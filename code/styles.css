@@ -1,0 +1,125 @@
+/* ===== GOOGLE FONTS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Poppins&family=Roboto&display=swap');
+
+/* ===== EVRENSEL SEÇİCİ ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+
+/* ===== Body ===== */
+body {
+    min-height: 100%;
+    background: #121212;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: #1F1F1F;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0, 1);
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    margin: 0 24px;
+}
+
+.navbar .logo .menu-icon {
+    color: #fff;
+    font-size: 24px;
+    margin: 0 14px 0 0;
+    cursor: pointer;
+}
+
+.navbar .logo .logo-name {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.navbar .sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 230px;
+    padding: 20px 0;
+    background: #1F1F1F;
+    box-shadow: 0 5 10px rgba(0, 0, 0, 0, 1);
+    transition: all 0.4s ease;
+}
+
+.navbar.open .sidebar {
+    left: 0;
+}
+
+.navbar .sidebar .sidebar-items {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 16px;
+}
+
+/* .navbar .sidebar .sidebar-items .lists {} */
+
+.navbar .sidebar .sidebar-items .list {
+    list-style: none;
+}
+
+.navbar .sidebar .sidebar-items .list .sidebar-link {
+    display: flex;
+    align-items: center;
+    padding: 14px 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.navbar .sidebar .sidebar-items .lists .list .sidebar-link:hover {
+    background-color: #363636;
+}
+
+.navbar .sidebar .sidebar-items .list .sidebar-link .sidebar-link-icon {
+    margin: 0 14px 0 0;
+    font-size: 20px;
+    color: #fff;
+}
+
+.navbar .sidebar .sidebar-items .list .sidebar-link .link {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+}
+
+ .navbar .sidebar .sidebar-items .list .sidebar-link:hover .sidebar-link-icon,
+ .navbar .sidebar .sidebar-items .list .sidebar-link:hover .link {
+    color: #fff;
+}
+
+.dark-smoke {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    width: 200%;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+    pointer-events: none;
+}
+
+.navbar.open~.dark-smoke {
+    left: 230px;
+    opacity: 1;
+    pointer-events: auto;
+}
